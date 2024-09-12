@@ -38,7 +38,7 @@ export default function Home() {
           alert(`ERROR! ${error.message}`);
         }}
       />
-      <div className="w-full mt-10 h-24 border rounded-md p-4 grid grid-cols-4 gap-4">
+      <div className="w-full mt-10 border rounded-md grid grid-cols-2 lg:grid-cols-4 gap-4 p-4">
         {!files && (
           <span className="col-span-4 text-center text-muted-foreground">
             You have no KML files uploaded yet.
