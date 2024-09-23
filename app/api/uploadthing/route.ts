@@ -1,11 +1,12 @@
-import { createRouteHandler } from "uploadthing/next";
+import { createRouteHandler } from "uploadthing/server";
  
 import { kmlFileRouter } from "./core";
  
 // Export routes for Next App Router
-export const { GET, POST } = createRouteHandler({
+const handler = createRouteHandler({
   router: kmlFileRouter,
- 
-  // Apply an (optional) custom config:
-  // config: { ... },
+  config: { 
+    logLevel: 'All'
+   },
 });
+export { handler as GET, handler as POST };

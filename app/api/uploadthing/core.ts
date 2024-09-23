@@ -1,4 +1,4 @@
-import { createUploadthing, type FileRouter } from 'uploadthing/next';
+import { createUploadthing, type FileRouter } from 'uploadthing/server';
 import { UploadThingError } from 'uploadthing/server';
 
 const f = createUploadthing();
@@ -12,8 +12,8 @@ const auth = async (req: Request) => {
 export const kmlFileRouter = {
   // Define as many FileRoutes as you like, each with a unique routeSlug
   kmlUploader: f({
-    'application/vnd.google-earth.kml+xml': { maxFileSize: '4MB', minFileCount: 1, maxFileCount: 1,  } 
-    // 'blob': { maxFileSize: '4MB', minFileCount: 1, maxFileCount: 1,  },
+    // 'application/vnd.google-earth.kml+xml': { maxFileSize: '4MB', minFileCount: 1, maxFileCount: 1,  } 
+    'blob': { maxFileSize: '4MB', minFileCount: 1, maxFileCount: 1,  },
   })
     // Set permissions and file types for this FileRoute
     .middleware(async ({ req }) => {
