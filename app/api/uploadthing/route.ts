@@ -7,7 +7,6 @@ export const { GET, POST } = createRouteHandler({
   router: kmlFileRouter,
   config: { 
     logLevel: 'Debug',
-    token: process.env.UPLOADTHING_TOKEN
    },
 });
 
