@@ -13,7 +13,7 @@ export const kmlFileRouter = {
   // Define as many FileRoutes as you like, each with a unique routeSlug
   kmlUploader: f({
     // 'application/vnd.google-earth.kml+xml': { maxFileSize: '4MB', minFileCount: 1, maxFileCount: 1,  } 
-    'blob': { maxFileSize: '4MB', minFileCount: 1, maxFileCount: 1,  },
+    'blob': { maxFileSize: '32MB', minFileCount: 1, maxFileCount: 1,  },
   })
     // Set permissions and file types for this FileRoute
     .middleware(async ({ req }) => {
